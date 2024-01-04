@@ -97,8 +97,8 @@ function showData() {
 <td>${product.category}</td>
 
 
-<td><button id="update" onclick="updateProduct(${index})">update</button></td>
-<td><button id="delete" onclick="deleteProduct(${index})">delete</button></td>
+<td><button id="update" onclick="updateProduct(${index})">تعديل</button></td>
+<td><button id="delete" onclick="deleteProduct(${index})">حذف</button></td>
 </tr>
         `;
   });
@@ -195,7 +195,7 @@ function searchData(value) {
   }
 
   tableBody.innerHTML = tableRows;
-  btndeleteAll.innerHTML = `<button onclick="deleteAllProducts()">delete All(${number})</button>`;
+  btndeleteAll.innerHTML = `<button onclick="deleteAllProducts()">حذف الكل(${number})</button>`;
 }
 
 // clean data
