@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="showData();">
+
+    <div class="crud">
+
+        <div class="head">
+
+            <h1> تحكم فى جميع منتجاتك </h1>
+
+        </div>
+        <div class="inputs">
+
+            <input placeholder="اسم المنتج" type="text" id="title">
+            <div class="price">
+                <input onkeyup=" getTotal()" placeholder="السعر" type="number" id="price">
+                <input onkeyup=" getTotal()" placeholder="الضريبة" type="number" id="taxes">
+                <input onkeyup=" getTotal()" placeholder="الاعلانات" type="number" id="ads">
+                <input onkeyup=" getTotal()" placeholder="الخصم" type="number" id="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="العدد" type="number" id="count">
+            <input placeholder="التصنيف" type="text" id="category">
+            <button type="submit" id="submit">اضافة</button>
+        </div>
+
+
+        <div class="outputs">
+
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث">
+                <div class="btnSearch">
+                    <button onclick=" getSearchMode(this.id)" id="searchTitle">بحث حسب المنتج</button>
+                    <button onclick=" getSearchMode(this.id)" id="searchCategory">بحث حسب التصنيف </button>
+
+                </div>
+
+            </div>
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>مسلسل</th>
+                    <th>اسم المنتج</th>
+                    <th>السعر</th>
+                    <th>الضريبة</th>
+                    <th>الاعلانات</th>
+                    <th>الخصم</th>
+                    <th>الاجمالى</th>
+                    <th>التصنيف</th>
+                    <th>تعديل المنتج</th>
+                    <th>حذف المنتج</th>
+                </tr>
+                <tbody id="tbody">
+
+
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
